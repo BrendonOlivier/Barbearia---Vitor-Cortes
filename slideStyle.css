@@ -1,0 +1,165 @@
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(87, 85, 85);
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.slider {
+    margin-left: 50px;
+    width: 600px;
+    height: 600px;
+    overflow: hidden; /* Mostraremos apenas primeira imagem */
+    border-radius: 20px;
+}
+
+.slides {
+    width: 400%;
+    height: 600px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 600px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 600px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+/* Vou aplicar uma margin nos itens, menos no ultimo item = last-child */
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: red;
+}
+
+/* Irei jogar os itens pro lado, a cada mudança de imagem */
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+#radio5:checked ~ .first{
+    margin-left: -100%;
+}
+
+#radio6:checked ~ .first{
+    margin-left: -125%;
+}
+
+#radio7:checked ~ .first{
+    margin-left: -150%;
+}
+
+#radio8:checked ~ .first{
+    margin-left: -175%;
+}
+
+#radio9:checked ~ .first{
+    margin-left: -200%;
+}
+
+.navigation-auto div {
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 600px;
+    margin-top: 560px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: blue;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: blue;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: blue;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: blue;
+}
+
+#radio5:checked ~ .navigation-auto .auto-btn5 {
+    background-color: blue;
+}
+
+#radio6:checked ~ .navigation-auto .auto-btn6{
+    background-color: blue;
+}
+
+#radio7:checked ~ .navigation-auto .auto-btn7{
+    background-color: blue;
+}
+
+#radio8:checked ~ .navigation-auto .auto-btn8{
+    background-color: blue;
+}
+
+#radio9:checked ~ .navigation-auto .auto-btn9{
+    background-color: blue;
+}
+
+
+
